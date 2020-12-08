@@ -81,7 +81,7 @@ for idx,line in enumerate(lines):
     elif line[0:3] == "jmp":
         code = lines.copy()
         code[idx] = code[idx].replace("jmp","nop")
-        print(code)
+        #print(code)
         retval = RunCode(bootcode, code)
         if retval == 0:
             print("Bug patched")
