@@ -59,3 +59,15 @@ class Tree:
             return paths
         else:
             return []
+
+    def getnodepathcnt(self, name):
+        if self.name == name:
+            return 1
+        elif len(self.children) > 0:
+            pathcnt = 0
+            for child in self.children:
+                childpathcnt = child.getnodepathcnt(name)
+                pathcnt += childpathcnt
+            return pathcnt
+        else:
+            return 0

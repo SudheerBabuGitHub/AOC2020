@@ -47,12 +47,11 @@ for i,num in enumerate(data):
             parent.insert(child,1)
         else:
             break
-paths = nodes[0].getnodepathcnt(str(data[-1]))
-print(len(paths))
+pathcnt = nodes[0].getnodepathcnt(str(data[-1]))
+print(pathcnt)
 """
 numpaths = 1
 incoming = [1]*numdata
-outgoing = [1]*numdata
 for idx,num in enumerate(data):
     numoutgoing = 1
     if idx - 2 >= 0 and num-data[idx-2]<=3:
